@@ -1,3 +1,14 @@
+# JS数据类型记忆口诀
+
+```
+USONB
+u undefined
+s string symbol
+o object
+n null number
+b boolean
+```
+
 ### 注释快捷键
 
 ```
