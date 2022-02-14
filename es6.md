@@ -158,4 +158,18 @@ const divArr = [...divs];   // 这样能使用数组的方法
 2.Symbol 的值不能与其他数据进行数据运算,比较
 3.Symbol 定义的对象属性不能用for...in循环遍历,只能使用Reflect.ownKeys来获取所有对象的键名
 
+给对象添加独一无二的属性方法
+ let a = {
+     name: '1',
+     sex: 'man'
+ }
+ let b = {
+     h: Symbol
+ }
+ a[b.h] = function() {}
+和
+let a = {
+     name: '1',
+     sex: 'man'
+     [Symbol('h')]: function(){}  // 括号内h是描述字符串
 ```
