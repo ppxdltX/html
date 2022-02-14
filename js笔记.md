@@ -1,4 +1,4 @@
-# JS数据类型记忆口诀
+# JS 数据类型记忆口诀
 
 ```
 USONB
@@ -524,6 +524,13 @@ node.appendChild(变量)   // node父级  child子级 添加时不用''插入到
 
 复制节点
 元素.clnoeNode(true);   // 括号为空或者是false 只复制标签不复制内容
+
+添加内容较多的元素
+insertAdjacentHTML('下列字符串', 文本);
+beforebegin   // 元素自身前面
+afterbegin    // 插入元素内部第一个子节点之前
+beforeend     // 插入元素内部最后一个子节点之后
+afterend      // 元素自身后面
 ```
 
 ### 方法监听注册事件(可以同一元素添加多个事件)
@@ -772,4 +779,62 @@ changedTouches         // 手指状态改变时触发
 添加类名:元素.classList.add('要添加的类名')
 删除类名:元素.classList.remove('要删除的类名')
 切换类名:元素.classList.toggle('要切换的类名')   // 有的删除,没有的添加
+```
+
+## 类
+
+```
+1.创建类:        // 首字母大写
+class 类名{
+    constructor(形参){
+        this.名称 = 形参;
+    }                       // 中间不需要加逗号
+    函数名称(函数形参){      // 不需要function
+        内容
+    }
+}
+
+2.创建对象:
+var 变量 = new 类名(实参);
+实参.函数名称(函数实参);
+
+3.调用
+
+语法规范:
+创建类时,类名后不加小括号,在new类名后需要加小括号,在类当中函数不需要function
+
+继承:
+在继承中,子类使用expends继承父类,super调用父类的函数,两者都有相同的方法则就近执行,super.方法()可以调用父类的方法,super必须在子类自己的this之前调用,不存在变量提升,类当中共有的属性和方法需要加this使用
+class Father{
+    constructor(x,y){
+        this.x = x;
+        this.y = y;
+    }
+    sum(){
+        console.log(this.x + this.y)
+    }
+}
+class Son extends Father{   // Son继承Father
+    constructor(x,y){
+        super(x,y);    // 调用父类中的构造函数
+    }
+}
+var 变量 = new Son(实参x,实参y);
+变量.sum();
+```
+
+## 构造函数和原型
+
+```
+function 名称(形参1,形参2){
+
+}
+```
+
+# 闭包
+
+```
+一个函数内嵌套一个子函数,子函数可以访问父函数的局部作用域
+作用:
+
 ```
