@@ -74,7 +74,7 @@ title--信息提示
 ### 表单
 
 ```
-<form action="url地址" method="提交方式" name="表单域名称">--表单域
+<form action="url地址" method="提交方式(post有安全性/get无安全性)" name="表单域名称">--表单域
 <input type="text" name="">   // name中输入名称
 <input type="submit" value="">--提交按钮，发送给服务器,value输入按钮名称
 </form>
